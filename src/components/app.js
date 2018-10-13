@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import ENV_VARS from '../environment'
+import YTSearch from 'youtube-api-search'
+
+YTSearch({ key: ENV_VARS.API_KEY, term: 'surfboards' }, (response) => {
+  console.log(response)
+})
 
 export default class App extends Component {
-
-  componentDidMount () {
-    console.log(ENV_VARS)
-  }
 
   render() {
     return (
