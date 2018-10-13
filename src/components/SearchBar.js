@@ -16,9 +16,9 @@ class SearchBar extends Component {
 
   render () {
     return (
-      <div>
+      <div className="text-center">
         <input onChange={ this.onInputChange } />
-        Value of the input { this.state.searchTerm }
+        Search term: { this.state.searchTerm }
       </div>
     )
   } 

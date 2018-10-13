@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SearchBar from './SearchBar'
+import VideoDetail from './VideoDetail'
 import VideoList from './VideoList'
 import ENV_VARS from '../environment'
 import YTSearch from 'youtube-api-search'
@@ -21,9 +22,16 @@ export default class App extends Component {
     const { videos } = this.state
 
     return (
-      <div>
-        <SearchBar />
-        <VideoList videos={ videos } />
+      <div className="container">
+        <header className="row d-flex justify-content-center">
+          <SearchBar />
+        </header>
+        <main className="container">
+          <div className="row">
+            <VideoDetail />
+            <VideoList videos={ videos } />
+          </div>
+        </main>
       </div>
     );
   }   
