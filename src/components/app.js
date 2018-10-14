@@ -10,16 +10,20 @@ export default class App extends Component {
     super(props)
 
     this.state = {
-      videos: []
+      videos: [],
+      selectedVideo: null
     }
     
     YTSearch({ key: ENV_VARS.API_KEY, term: 'lil tay' }, (videos) => {
-      this.setState({ videos })
+      this.setState({ 
+        videos, 
+        selectedVideo: videos[0] 
+      })
     })
   }
 
   render() {
-    const { videos } = this.state
+    const { videos, selectedVideo } = this.state
 
     return (
       <div className="container">
@@ -28,11 +32,14 @@ export default class App extends Component {
         </header>
         <main className="container">
           <div className="row">
-            <VideoDetail />
-            <VideoList videos={ videos } />
+            <VideoDetail video={ selectedVideo } />
+            <VideoList 
+              videos={ videos } 
+              onVideoSelect={ (selectedVideo) => this.setState({ selectedVideo })}   
+            />
           </div>
         </main>
       </div>
-    );
+    )
   }   
 }

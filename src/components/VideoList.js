@@ -2,7 +2,7 @@ import React from 'react'
 import VideoListItem from './VideoListItem'
 
 const VideoList = (props) => {
-  const { videos } = props
+  const { videos, onVideoSelect } = props
 
   console.log(videos)
 
@@ -10,7 +10,15 @@ const VideoList = (props) => {
     <aside className="col-md-4 video-list">
       { 
         videos.length > 0 && 
-        videos.map(video => <VideoListItem  key={ video.id.videoId } video={ video } /> )
+        videos.map(video => {
+          return (
+            <VideoListItem  
+              key={ video.id.videoId } 
+              video={ video } 
+              onVideoSelect={ onVideoSelect } 
+            /> 
+          )
+        })
       }
     </aside>
   )
