@@ -10,11 +10,10 @@ const VideoListItem = (props) => {
   }
 
   return (
-    <div className="card mt-2 mb-2" onClick={ () => onVideoSelect(video) }>
+    <div className="card video-list-item mt-2 mb-4" onClick={ () => onVideoSelect(video) }>
       <div style={ croppedThumbnailImage }></div>
       <div className="card-body" style={{ padding: '1em' }}>
         <h5 className="card-title">{ snippet.title }</h5>
-        {/* <p className="card-text">{ snippet.description }</p> */}
       </div>
     </div>
   )

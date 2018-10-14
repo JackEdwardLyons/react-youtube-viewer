@@ -4,8 +4,6 @@ import VideoListItem from './VideoListItem'
 const VideoList = (props) => {
   const { videos, onVideoSelect } = props
 
-  console.log(videos)
-
   return (
     <aside className="col-md-4 video-list">
       { 
