@@ -22,7 +22,7 @@ class SearchBar extends Component {
           className="search-bar" 
           onChange={ (event) => this.onInputChange(event.target.value) } 
         />
-        <i class="fa fa-search search-bar__icon"></i>
+        <i className="fa fa-search search-bar__icon"></i>
       </div>
     )
   } 

@@ -5,6 +5,7 @@ import SearchBar from './SearchBar'
 import VideoDetail from './VideoDetail'
 import VideoList from './VideoList'
 
+
 export default class App extends Component {
   constructor (props) {
     super(props)
@@ -52,7 +53,7 @@ export default class App extends Component {
         </main>
         <footer>
           <hr />
-          <p class="text-center pt-4">
+          <p className="text-center pt-4">
             Built 🛠️ by <a href="https://www.jacklyons.me" target="_blank">Jack Lyons</a>
           </p>
         </footer>
